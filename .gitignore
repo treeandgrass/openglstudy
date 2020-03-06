@@ -2,3 +2,6 @@
 CMakeFiles
 Makefile
 openglstudy
+bin
+*.a
+CMakeCache.txt
