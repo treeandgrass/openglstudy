@@ -60,6 +60,7 @@ set(CHAPTERS
 
 set(journey
     hello_window
+    triangle
 )
 
 

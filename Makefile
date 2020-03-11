@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/my/program/openglstudy
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.16.5/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/Cellar/cmake/3.16.5/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named journey__triangle
+
+# Build rule for target.
+journey__triangle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__triangle
+.PHONY : journey__triangle
+
+# fast build rule for target.
+journey__triangle/fast:
+	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/build
+.PHONY : journey__triangle/fast
 
 #=============================================================================
 # Target rules for targets named journey__hello_window
@@ -203,6 +216,33 @@ src/journey/hello_window/hello_window.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__hello_window.dir/build.make CMakeFiles/journey__hello_window.dir/src/journey/hello_window/hello_window.cpp.s
 .PHONY : src/journey/hello_window/hello_window.cpp.s
 
+src/journey/triangle/triangle.o: src/journey/triangle/triangle.cpp.o
+
+.PHONY : src/journey/triangle/triangle.o
+
+# target to build an object file
+src/journey/triangle/triangle.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/src/journey/triangle/triangle.cpp.o
+.PHONY : src/journey/triangle/triangle.cpp.o
+
+src/journey/triangle/triangle.i: src/journey/triangle/triangle.cpp.i
+
+.PHONY : src/journey/triangle/triangle.i
+
+# target to preprocess a source file
+src/journey/triangle/triangle.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/src/journey/triangle/triangle.cpp.i
+.PHONY : src/journey/triangle/triangle.cpp.i
+
+src/journey/triangle/triangle.s: src/journey/triangle/triangle.cpp.s
+
+.PHONY : src/journey/triangle/triangle.s
+
+# target to generate assembly for a file
+src/journey/triangle/triangle.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/src/journey/triangle/triangle.cpp.s
+.PHONY : src/journey/triangle/triangle.cpp.s
+
 src/stb_image.o: src/stb_image.cpp.o
 
 .PHONY : src/stb_image.o
@@ -236,9 +276,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... journey__triangle"
 	@echo "... journey__hello_window"
+	@echo "... rebuild_cache"
 	@echo "... GLAD"
 	@echo "... STB_IMAGE"
 	@echo "... src/glad.o"
@@ -247,6 +288,9 @@ help:
 	@echo "... src/journey/hello_window/hello_window.o"
 	@echo "... src/journey/hello_window/hello_window.i"
 	@echo "... src/journey/hello_window/hello_window.s"
+	@echo "... src/journey/triangle/triangle.o"
+	@echo "... src/journey/triangle/triangle.i"
+	@echo "... src/journey/triangle/triangle.s"
 	@echo "... src/stb_image.o"
 	@echo "... src/stb_image.i"
 	@echo "... src/stb_image.s"

@@ -16,6 +16,7 @@ def readFileList(directory):
 
 
 def run(path):
+    print(path)
     l = list()
     l.append(path)
     subprocess.run(l)
@@ -35,6 +36,6 @@ if __name__ == "__main__":
         run("make")
     # run specific command
     for f in fileList:
-        if f.find(execf):
+        if f.find(execf) != -1:
             run(f)
             break
