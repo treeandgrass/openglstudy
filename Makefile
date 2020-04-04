@@ -124,6 +124,19 @@ journey__triangle/fast:
 .PHONY : journey__triangle/fast
 
 #=============================================================================
+# Target rules for targets named journey__shader
+
+# Build rule for target.
+journey__shader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__shader
+.PHONY : journey__shader
+
+# fast build rule for target.
+journey__shader/fast:
+	$(MAKE) -f CMakeFiles/journey__shader.dir/build.make CMakeFiles/journey__shader.dir/build
+.PHONY : journey__shader/fast
+
+#=============================================================================
 # Target rules for targets named journey__hello_window
 
 # Build rule for target.
@@ -216,6 +229,33 @@ src/journey/hello_window/hello_window.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__hello_window.dir/build.make CMakeFiles/journey__hello_window.dir/src/journey/hello_window/hello_window.cpp.s
 .PHONY : src/journey/hello_window/hello_window.cpp.s
 
+src/journey/shader/shader.o: src/journey/shader/shader.cpp.o
+
+.PHONY : src/journey/shader/shader.o
+
+# target to build an object file
+src/journey/shader/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__shader.dir/build.make CMakeFiles/journey__shader.dir/src/journey/shader/shader.cpp.o
+.PHONY : src/journey/shader/shader.cpp.o
+
+src/journey/shader/shader.i: src/journey/shader/shader.cpp.i
+
+.PHONY : src/journey/shader/shader.i
+
+# target to preprocess a source file
+src/journey/shader/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__shader.dir/build.make CMakeFiles/journey__shader.dir/src/journey/shader/shader.cpp.i
+.PHONY : src/journey/shader/shader.cpp.i
+
+src/journey/shader/shader.s: src/journey/shader/shader.cpp.s
+
+.PHONY : src/journey/shader/shader.s
+
+# target to generate assembly for a file
+src/journey/shader/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__shader.dir/build.make CMakeFiles/journey__shader.dir/src/journey/shader/shader.cpp.s
+.PHONY : src/journey/shader/shader.cpp.s
+
 src/journey/triangle/triangle.o: src/journey/triangle/triangle.cpp.o
 
 .PHONY : src/journey/triangle/triangle.o
@@ -278,6 +318,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... journey__triangle"
+	@echo "... journey__shader"
 	@echo "... journey__hello_window"
 	@echo "... rebuild_cache"
 	@echo "... GLAD"
@@ -288,6 +329,9 @@ help:
 	@echo "... src/journey/hello_window/hello_window.o"
 	@echo "... src/journey/hello_window/hello_window.i"
 	@echo "... src/journey/hello_window/hello_window.s"
+	@echo "... src/journey/shader/shader.o"
+	@echo "... src/journey/shader/shader.i"
+	@echo "... src/journey/shader/shader.s"
 	@echo "... src/journey/triangle/triangle.o"
 	@echo "... src/journey/triangle/triangle.i"
 	@echo "... src/journey/triangle/triangle.s"
