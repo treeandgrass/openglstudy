@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named journey__texture
+
+# Build rule for target.
+journey__texture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__texture
+.PHONY : journey__texture
+
+# fast build rule for target.
+journey__texture/fast:
+	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/build
+.PHONY : journey__texture/fast
+
+#=============================================================================
 # Target rules for targets named journey__triangle
 
 # Build rule for target.
@@ -256,6 +269,33 @@ src/journey/shader/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__shader.dir/build.make CMakeFiles/journey__shader.dir/src/journey/shader/shader.cpp.s
 .PHONY : src/journey/shader/shader.cpp.s
 
+src/journey/texture/texture.o: src/journey/texture/texture.cpp.o
+
+.PHONY : src/journey/texture/texture.o
+
+# target to build an object file
+src/journey/texture/texture.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/src/journey/texture/texture.cpp.o
+.PHONY : src/journey/texture/texture.cpp.o
+
+src/journey/texture/texture.i: src/journey/texture/texture.cpp.i
+
+.PHONY : src/journey/texture/texture.i
+
+# target to preprocess a source file
+src/journey/texture/texture.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/src/journey/texture/texture.cpp.i
+.PHONY : src/journey/texture/texture.cpp.i
+
+src/journey/texture/texture.s: src/journey/texture/texture.cpp.s
+
+.PHONY : src/journey/texture/texture.s
+
+# target to generate assembly for a file
+src/journey/texture/texture.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/src/journey/texture/texture.cpp.s
+.PHONY : src/journey/texture/texture.cpp.s
+
 src/journey/triangle/triangle.o: src/journey/triangle/triangle.cpp.o
 
 .PHONY : src/journey/triangle/triangle.o
@@ -317,6 +357,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... journey__texture"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
 	@echo "... journey__hello_window"
@@ -332,6 +373,9 @@ help:
 	@echo "... src/journey/shader/shader.o"
 	@echo "... src/journey/shader/shader.i"
 	@echo "... src/journey/shader/shader.s"
+	@echo "... src/journey/texture/texture.o"
+	@echo "... src/journey/texture/texture.i"
+	@echo "... src/journey/texture/texture.s"
 	@echo "... src/journey/triangle/triangle.o"
 	@echo "... src/journey/triangle/triangle.i"
 	@echo "... src/journey/triangle/triangle.s"

@@ -62,6 +62,7 @@ set(journey
     hello_window
     triangle
     shader
+    texture
 )
 
 
