@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named journey__transform
+
+# Build rule for target.
+journey__transform: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__transform
+.PHONY : journey__transform
+
+# fast build rule for target.
+journey__transform/fast:
+	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/build
+.PHONY : journey__transform/fast
+
+#=============================================================================
 # Target rules for targets named journey__texture
 
 # Build rule for target.
@@ -296,6 +309,33 @@ src/journey/texture/texture.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/src/journey/texture/texture.cpp.s
 .PHONY : src/journey/texture/texture.cpp.s
 
+src/journey/transform/transform.o: src/journey/transform/transform.cpp.o
+
+.PHONY : src/journey/transform/transform.o
+
+# target to build an object file
+src/journey/transform/transform.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/src/journey/transform/transform.cpp.o
+.PHONY : src/journey/transform/transform.cpp.o
+
+src/journey/transform/transform.i: src/journey/transform/transform.cpp.i
+
+.PHONY : src/journey/transform/transform.i
+
+# target to preprocess a source file
+src/journey/transform/transform.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/src/journey/transform/transform.cpp.i
+.PHONY : src/journey/transform/transform.cpp.i
+
+src/journey/transform/transform.s: src/journey/transform/transform.cpp.s
+
+.PHONY : src/journey/transform/transform.s
+
+# target to generate assembly for a file
+src/journey/transform/transform.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/src/journey/transform/transform.cpp.s
+.PHONY : src/journey/transform/transform.cpp.s
+
 src/journey/triangle/triangle.o: src/journey/triangle/triangle.cpp.o
 
 .PHONY : src/journey/triangle/triangle.o
@@ -357,6 +397,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... journey__transform"
 	@echo "... journey__texture"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
@@ -376,6 +417,9 @@ help:
 	@echo "... src/journey/texture/texture.o"
 	@echo "... src/journey/texture/texture.i"
 	@echo "... src/journey/texture/texture.s"
+	@echo "... src/journey/transform/transform.o"
+	@echo "... src/journey/transform/transform.i"
+	@echo "... src/journey/transform/transform.s"
 	@echo "... src/journey/triangle/triangle.o"
 	@echo "... src/journey/triangle/triangle.i"
 	@echo "... src/journey/triangle/triangle.s"

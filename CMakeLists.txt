@@ -63,6 +63,7 @@ set(journey
     triangle
     shader
     texture
+    transform
 )
 
 
