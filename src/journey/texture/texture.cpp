@@ -7,12 +7,27 @@
 
 int width = 800;
 int height = 600;
+float mixValue = 0.2f;
 
 
 void framebuffer_callback_size(GLFWwindow *window, int width, int height);
 void processInput(GLFWwindow * window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+        mixValue += 0.01f;
+        if (mixValue > 1.0f) {
+            mixValue = 1.0f;
+        }
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+        mixValue -= 0.01f;
+        if (mixValue < 0.0f) {
+            mixValue = 0.0f;
+        }
     }
 }
 
@@ -134,6 +149,8 @@ int main(int argc, char** argv) {
     shader.use();
     glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
     shader.setInt("texture2", 1);
+
+    shader.setFloat("mixValue", mixValue);
 
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
