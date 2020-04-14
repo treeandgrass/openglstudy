@@ -163,6 +163,19 @@ journey__shader/fast:
 .PHONY : journey__shader/fast
 
 #=============================================================================
+# Target rules for targets named journey__coordinates
+
+# Build rule for target.
+journey__coordinates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__coordinates
+.PHONY : journey__coordinates
+
+# fast build rule for target.
+journey__coordinates/fast:
+	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/build
+.PHONY : journey__coordinates/fast
+
+#=============================================================================
 # Target rules for targets named journey__hello_window
 
 # Build rule for target.
@@ -227,6 +240,33 @@ src/glad.s: src/glad.c.s
 src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/src/glad.c.s
 .PHONY : src/glad.c.s
+
+src/journey/coordinates/coordinates.o: src/journey/coordinates/coordinates.cpp.o
+
+.PHONY : src/journey/coordinates/coordinates.o
+
+# target to build an object file
+src/journey/coordinates/coordinates.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/src/journey/coordinates/coordinates.cpp.o
+.PHONY : src/journey/coordinates/coordinates.cpp.o
+
+src/journey/coordinates/coordinates.i: src/journey/coordinates/coordinates.cpp.i
+
+.PHONY : src/journey/coordinates/coordinates.i
+
+# target to preprocess a source file
+src/journey/coordinates/coordinates.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/src/journey/coordinates/coordinates.cpp.i
+.PHONY : src/journey/coordinates/coordinates.cpp.i
+
+src/journey/coordinates/coordinates.s: src/journey/coordinates/coordinates.cpp.s
+
+.PHONY : src/journey/coordinates/coordinates.s
+
+# target to generate assembly for a file
+src/journey/coordinates/coordinates.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/src/journey/coordinates/coordinates.cpp.s
+.PHONY : src/journey/coordinates/coordinates.cpp.s
 
 src/journey/hello_window/hello_window.o: src/journey/hello_window/hello_window.cpp.o
 
@@ -401,6 +441,7 @@ help:
 	@echo "... journey__texture"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
+	@echo "... journey__coordinates"
 	@echo "... journey__hello_window"
 	@echo "... rebuild_cache"
 	@echo "... GLAD"
@@ -408,6 +449,9 @@ help:
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
+	@echo "... src/journey/coordinates/coordinates.o"
+	@echo "... src/journey/coordinates/coordinates.i"
+	@echo "... src/journey/coordinates/coordinates.s"
 	@echo "... src/journey/hello_window/hello_window.o"
 	@echo "... src/journey/hello_window/hello_window.i"
 	@echo "... src/journey/hello_window/hello_window.s"

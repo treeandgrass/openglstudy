@@ -64,6 +64,7 @@ set(journey
     shader
     texture
     transform
+    coordinates
 )
 
 
