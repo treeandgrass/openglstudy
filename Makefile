@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named STB_IMAGE
+
+# Build rule for target.
+STB_IMAGE: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
+.PHONY : STB_IMAGE
+
+# fast build rule for target.
+STB_IMAGE/fast:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
+.PHONY : STB_IMAGE/fast
+
+#=============================================================================
 # Target rules for targets named journey__transform
 
 # Build rule for target.
@@ -122,6 +135,45 @@ journey__transform: cmake_check_build_system
 journey__transform/fast:
 	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/build
 .PHONY : journey__transform/fast
+
+#=============================================================================
+# Target rules for targets named GLAD
+
+# Build rule for target.
+GLAD: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GLAD
+.PHONY : GLAD
+
+# fast build rule for target.
+GLAD/fast:
+	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
+.PHONY : GLAD/fast
+
+#=============================================================================
+# Target rules for targets named lights__colors
+
+# Build rule for target.
+lights__colors: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__colors
+.PHONY : lights__colors
+
+# fast build rule for target.
+lights__colors/fast:
+	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/build
+.PHONY : lights__colors/fast
+
+#=============================================================================
+# Target rules for targets named journey__camera
+
+# Build rule for target.
+journey__camera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__camera
+.PHONY : journey__camera
+
+# fast build rule for target.
+journey__camera/fast:
+	$(MAKE) -f CMakeFiles/journey__camera.dir/build.make CMakeFiles/journey__camera.dir/build
+.PHONY : journey__camera/fast
 
 #=============================================================================
 # Target rules for targets named journey__texture
@@ -188,32 +240,6 @@ journey__hello_window/fast:
 	$(MAKE) -f CMakeFiles/journey__hello_window.dir/build.make CMakeFiles/journey__hello_window.dir/build
 .PHONY : journey__hello_window/fast
 
-#=============================================================================
-# Target rules for targets named GLAD
-
-# Build rule for target.
-GLAD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GLAD
-.PHONY : GLAD
-
-# fast build rule for target.
-GLAD/fast:
-	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
-.PHONY : GLAD/fast
-
-#=============================================================================
-# Target rules for targets named STB_IMAGE
-
-# Build rule for target.
-STB_IMAGE: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
-.PHONY : STB_IMAGE
-
-# fast build rule for target.
-STB_IMAGE/fast:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
-.PHONY : STB_IMAGE/fast
-
 src/glad.o: src/glad.c.o
 
 .PHONY : src/glad.o
@@ -240,6 +266,33 @@ src/glad.s: src/glad.c.s
 src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/src/glad.c.s
 .PHONY : src/glad.c.s
+
+src/journey/camera/coordinates.o: src/journey/camera/coordinates.cpp.o
+
+.PHONY : src/journey/camera/coordinates.o
+
+# target to build an object file
+src/journey/camera/coordinates.cpp.o:
+	$(MAKE) -f CMakeFiles/journey__camera.dir/build.make CMakeFiles/journey__camera.dir/src/journey/camera/coordinates.cpp.o
+.PHONY : src/journey/camera/coordinates.cpp.o
+
+src/journey/camera/coordinates.i: src/journey/camera/coordinates.cpp.i
+
+.PHONY : src/journey/camera/coordinates.i
+
+# target to preprocess a source file
+src/journey/camera/coordinates.cpp.i:
+	$(MAKE) -f CMakeFiles/journey__camera.dir/build.make CMakeFiles/journey__camera.dir/src/journey/camera/coordinates.cpp.i
+.PHONY : src/journey/camera/coordinates.cpp.i
+
+src/journey/camera/coordinates.s: src/journey/camera/coordinates.cpp.s
+
+.PHONY : src/journey/camera/coordinates.s
+
+# target to generate assembly for a file
+src/journey/camera/coordinates.cpp.s:
+	$(MAKE) -f CMakeFiles/journey__camera.dir/build.make CMakeFiles/journey__camera.dir/src/journey/camera/coordinates.cpp.s
+.PHONY : src/journey/camera/coordinates.cpp.s
 
 src/journey/coordinates/coordinates.o: src/journey/coordinates/coordinates.cpp.o
 
@@ -403,6 +456,33 @@ src/journey/triangle/triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/src/journey/triangle/triangle.cpp.s
 .PHONY : src/journey/triangle/triangle.cpp.s
 
+src/lights/colors/color.o: src/lights/colors/color.cpp.o
+
+.PHONY : src/lights/colors/color.o
+
+# target to build an object file
+src/lights/colors/color.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.o
+.PHONY : src/lights/colors/color.cpp.o
+
+src/lights/colors/color.i: src/lights/colors/color.cpp.i
+
+.PHONY : src/lights/colors/color.i
+
+# target to preprocess a source file
+src/lights/colors/color.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.i
+.PHONY : src/lights/colors/color.cpp.i
+
+src/lights/colors/color.s: src/lights/colors/color.cpp.s
+
+.PHONY : src/lights/colors/color.s
+
+# target to generate assembly for a file
+src/lights/colors/color.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.s
+.PHONY : src/lights/colors/color.cpp.s
+
 src/stb_image.o: src/stb_image.cpp.o
 
 .PHONY : src/stb_image.o
@@ -436,19 +516,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... STB_IMAGE"
 	@echo "... edit_cache"
 	@echo "... journey__transform"
+	@echo "... GLAD"
+	@echo "... lights__colors"
+	@echo "... journey__camera"
 	@echo "... journey__texture"
+	@echo "... rebuild_cache"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
 	@echo "... journey__coordinates"
 	@echo "... journey__hello_window"
-	@echo "... rebuild_cache"
-	@echo "... GLAD"
-	@echo "... STB_IMAGE"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
+	@echo "... src/journey/camera/coordinates.o"
+	@echo "... src/journey/camera/coordinates.i"
+	@echo "... src/journey/camera/coordinates.s"
 	@echo "... src/journey/coordinates/coordinates.o"
 	@echo "... src/journey/coordinates/coordinates.i"
 	@echo "... src/journey/coordinates/coordinates.s"
@@ -467,6 +552,9 @@ help:
 	@echo "... src/journey/triangle/triangle.o"
 	@echo "... src/journey/triangle/triangle.i"
 	@echo "... src/journey/triangle/triangle.s"
+	@echo "... src/lights/colors/color.o"
+	@echo "... src/lights/colors/color.i"
+	@echo "... src/lights/colors/color.s"
 	@echo "... src/stb_image.o"
 	@echo "... src/stb_image.i"
 	@echo "... src/stb_image.s"

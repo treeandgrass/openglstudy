@@ -56,6 +56,7 @@ endif(WIN32)
 
 set(CHAPTERS
     journey
+    lights
 )
 
 set(journey
@@ -65,6 +66,12 @@ set(journey
     texture
     transform
     coordinates
+    camera
+)
+
+set(
+    lights
+    colors
 )
 
 
