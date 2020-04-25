@@ -68,8 +68,8 @@ int main()
     glEnable(GL_DEPTH_TEST);
 
     // shader
-    Shader cubeShader("./src/lights/colors/cube.vs", "./src/lights/colors/cube.fs");
-    Shader lightCubeShader("./src/lights/colors/lightCube.vs", "./src/lights/colors/lightCube.fs");
+    Shader cubeShader("cube.vs", "cube.fs");
+    Shader lightCubeShader("lightCube.vs", "lightCube.fs");
     
     float vertices[] = {
         -0.5f, -0.5f, -0.5f, 
@@ -158,7 +158,7 @@ int main()
         lightCubeShader.setVec3("lightColor",  1.0f, 1.0f, 1.0f);
 
         // view/projection transformations
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 1000.0f);
+        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
@@ -168,8 +168,8 @@ int main()
         lightCubeShader.setMat4("model", model);
 
         // // render the cube
-        glBindVertexArray(cubeVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        // glBindVertexArray(cubeVAO);
+        // glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
         // also draw the lamp object
