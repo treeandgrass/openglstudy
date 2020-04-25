@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /Users/my/program/openglstudy
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.16.5/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/Cellar/cmake/3.16.5/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named STB_IMAGE
-
-# Build rule for target.
-STB_IMAGE: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
-.PHONY : STB_IMAGE
-
-# fast build rule for target.
-STB_IMAGE/fast:
-	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
-.PHONY : STB_IMAGE/fast
-
-#=============================================================================
 # Target rules for targets named journey__transform
 
 # Build rule for target.
@@ -135,6 +122,19 @@ journey__transform: cmake_check_build_system
 journey__transform/fast:
 	$(MAKE) -f CMakeFiles/journey__transform.dir/build.make CMakeFiles/journey__transform.dir/build
 .PHONY : journey__transform/fast
+
+#=============================================================================
+# Target rules for targets named lights__basicLight
+
+# Build rule for target.
+lights__basicLight: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__basicLight
+.PHONY : lights__basicLight
+
+# fast build rule for target.
+lights__basicLight/fast:
+	$(MAKE) -f CMakeFiles/lights__basicLight.dir/build.make CMakeFiles/lights__basicLight.dir/build
+.PHONY : lights__basicLight/fast
 
 #=============================================================================
 # Target rules for targets named GLAD
@@ -239,6 +239,19 @@ journey__hello_window: cmake_check_build_system
 journey__hello_window/fast:
 	$(MAKE) -f CMakeFiles/journey__hello_window.dir/build.make CMakeFiles/journey__hello_window.dir/build
 .PHONY : journey__hello_window/fast
+
+#=============================================================================
+# Target rules for targets named STB_IMAGE
+
+# Build rule for target.
+STB_IMAGE: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 STB_IMAGE
+.PHONY : STB_IMAGE
+
+# fast build rule for target.
+STB_IMAGE/fast:
+	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
+.PHONY : STB_IMAGE/fast
 
 src/glad.o: src/glad.c.o
 
@@ -456,6 +469,33 @@ src/journey/triangle/triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/journey__triangle.dir/build.make CMakeFiles/journey__triangle.dir/src/journey/triangle/triangle.cpp.s
 .PHONY : src/journey/triangle/triangle.cpp.s
 
+src/lights/basicLight/basicLight.o: src/lights/basicLight/basicLight.cpp.o
+
+.PHONY : src/lights/basicLight/basicLight.o
+
+# target to build an object file
+src/lights/basicLight/basicLight.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__basicLight.dir/build.make CMakeFiles/lights__basicLight.dir/src/lights/basicLight/basicLight.cpp.o
+.PHONY : src/lights/basicLight/basicLight.cpp.o
+
+src/lights/basicLight/basicLight.i: src/lights/basicLight/basicLight.cpp.i
+
+.PHONY : src/lights/basicLight/basicLight.i
+
+# target to preprocess a source file
+src/lights/basicLight/basicLight.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__basicLight.dir/build.make CMakeFiles/lights__basicLight.dir/src/lights/basicLight/basicLight.cpp.i
+.PHONY : src/lights/basicLight/basicLight.cpp.i
+
+src/lights/basicLight/basicLight.s: src/lights/basicLight/basicLight.cpp.s
+
+.PHONY : src/lights/basicLight/basicLight.s
+
+# target to generate assembly for a file
+src/lights/basicLight/basicLight.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__basicLight.dir/build.make CMakeFiles/lights__basicLight.dir/src/lights/basicLight/basicLight.cpp.s
+.PHONY : src/lights/basicLight/basicLight.cpp.s
+
 src/lights/colors/color.o: src/lights/colors/color.cpp.o
 
 .PHONY : src/lights/colors/color.o
@@ -516,9 +556,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... STB_IMAGE"
-	@echo "... edit_cache"
 	@echo "... journey__transform"
+	@echo "... lights__basicLight"
 	@echo "... GLAD"
 	@echo "... lights__colors"
 	@echo "... journey__camera"
@@ -528,6 +567,8 @@ help:
 	@echo "... journey__shader"
 	@echo "... journey__coordinates"
 	@echo "... journey__hello_window"
+	@echo "... edit_cache"
+	@echo "... STB_IMAGE"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
@@ -552,6 +593,9 @@ help:
 	@echo "... src/journey/triangle/triangle.o"
 	@echo "... src/journey/triangle/triangle.i"
 	@echo "... src/journey/triangle/triangle.s"
+	@echo "... src/lights/basicLight/basicLight.o"
+	@echo "... src/lights/basicLight/basicLight.i"
+	@echo "... src/lights/basicLight/basicLight.s"
 	@echo "... src/lights/colors/color.o"
 	@echo "... src/lights/colors/color.i"
 	@echo "... src/lights/colors/color.s"

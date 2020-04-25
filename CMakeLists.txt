@@ -72,6 +72,7 @@ set(journey
 set(
     lights
     colors
+    basicLight
 )
 
 
