@@ -228,6 +228,19 @@ journey__coordinates/fast:
 .PHONY : journey__coordinates/fast
 
 #=============================================================================
+# Target rules for targets named lights__materials
+
+# Build rule for target.
+lights__materials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__materials
+.PHONY : lights__materials
+
+# fast build rule for target.
+lights__materials/fast:
+	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/build
+.PHONY : lights__materials/fast
+
+#=============================================================================
 # Target rules for targets named journey__hello_window
 
 # Build rule for target.
@@ -523,6 +536,33 @@ src/lights/colors/color.cpp.s:
 	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.s
 .PHONY : src/lights/colors/color.cpp.s
 
+src/lights/materials/materials.o: src/lights/materials/materials.cpp.o
+
+.PHONY : src/lights/materials/materials.o
+
+# target to build an object file
+src/lights/materials/materials.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/src/lights/materials/materials.cpp.o
+.PHONY : src/lights/materials/materials.cpp.o
+
+src/lights/materials/materials.i: src/lights/materials/materials.cpp.i
+
+.PHONY : src/lights/materials/materials.i
+
+# target to preprocess a source file
+src/lights/materials/materials.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/src/lights/materials/materials.cpp.i
+.PHONY : src/lights/materials/materials.cpp.i
+
+src/lights/materials/materials.s: src/lights/materials/materials.cpp.s
+
+.PHONY : src/lights/materials/materials.s
+
+# target to generate assembly for a file
+src/lights/materials/materials.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/src/lights/materials/materials.cpp.s
+.PHONY : src/lights/materials/materials.cpp.s
+
 src/stb_image.o: src/stb_image.cpp.o
 
 .PHONY : src/stb_image.o
@@ -566,6 +606,7 @@ help:
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
 	@echo "... journey__coordinates"
+	@echo "... lights__materials"
 	@echo "... journey__hello_window"
 	@echo "... edit_cache"
 	@echo "... STB_IMAGE"
@@ -599,6 +640,9 @@ help:
 	@echo "... src/lights/colors/color.o"
 	@echo "... src/lights/colors/color.i"
 	@echo "... src/lights/colors/color.s"
+	@echo "... src/lights/materials/materials.o"
+	@echo "... src/lights/materials/materials.i"
+	@echo "... src/lights/materials/materials.s"
 	@echo "... src/stb_image.o"
 	@echo "... src/stb_image.i"
 	@echo "... src/stb_image.s"

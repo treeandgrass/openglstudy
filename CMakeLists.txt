@@ -73,6 +73,7 @@ set(
     lights
     colors
     basicLight
+    materials
 )
 
 
