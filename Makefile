@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lights__lightMaps
+
+# Build rule for target.
+lights__lightMaps: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__lightMaps
+.PHONY : lights__lightMaps
+
+# fast build rule for target.
+lights__lightMaps/fast:
+	$(MAKE) -f CMakeFiles/lights__lightMaps.dir/build.make CMakeFiles/lights__lightMaps.dir/build
+.PHONY : lights__lightMaps/fast
+
+#=============================================================================
 # Target rules for targets named journey__transform
 
 # Build rule for target.
@@ -536,6 +549,33 @@ src/lights/colors/color.cpp.s:
 	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.s
 .PHONY : src/lights/colors/color.cpp.s
 
+src/lights/lightMaps/lightMaps.o: src/lights/lightMaps/lightMaps.cpp.o
+
+.PHONY : src/lights/lightMaps/lightMaps.o
+
+# target to build an object file
+src/lights/lightMaps/lightMaps.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__lightMaps.dir/build.make CMakeFiles/lights__lightMaps.dir/src/lights/lightMaps/lightMaps.cpp.o
+.PHONY : src/lights/lightMaps/lightMaps.cpp.o
+
+src/lights/lightMaps/lightMaps.i: src/lights/lightMaps/lightMaps.cpp.i
+
+.PHONY : src/lights/lightMaps/lightMaps.i
+
+# target to preprocess a source file
+src/lights/lightMaps/lightMaps.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__lightMaps.dir/build.make CMakeFiles/lights__lightMaps.dir/src/lights/lightMaps/lightMaps.cpp.i
+.PHONY : src/lights/lightMaps/lightMaps.cpp.i
+
+src/lights/lightMaps/lightMaps.s: src/lights/lightMaps/lightMaps.cpp.s
+
+.PHONY : src/lights/lightMaps/lightMaps.s
+
+# target to generate assembly for a file
+src/lights/lightMaps/lightMaps.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__lightMaps.dir/build.make CMakeFiles/lights__lightMaps.dir/src/lights/lightMaps/lightMaps.cpp.s
+.PHONY : src/lights/lightMaps/lightMaps.cpp.s
+
 src/lights/materials/materials.o: src/lights/materials/materials.cpp.o
 
 .PHONY : src/lights/materials/materials.o
@@ -596,6 +636,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... lights__lightMaps"
 	@echo "... journey__transform"
 	@echo "... lights__basicLight"
 	@echo "... GLAD"
@@ -640,6 +681,9 @@ help:
 	@echo "... src/lights/colors/color.o"
 	@echo "... src/lights/colors/color.i"
 	@echo "... src/lights/colors/color.s"
+	@echo "... src/lights/lightMaps/lightMaps.o"
+	@echo "... src/lights/lightMaps/lightMaps.i"
+	@echo "... src/lights/lightMaps/lightMaps.s"
 	@echo "... src/lights/materials/materials.o"
 	@echo "... src/lights/materials/materials.i"
 	@echo "... src/lights/materials/materials.s"

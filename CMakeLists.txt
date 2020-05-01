@@ -74,6 +74,7 @@ set(
     colors
     basicLight
     materials
+    lightMaps
 )
 
 

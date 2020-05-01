@@ -9,7 +9,6 @@ int width = 800;
 int height = 600;
 float mixValue = 0.2f;
 
-
 void framebuffer_callback_size(GLFWwindow *window, int width, int height);
 void processInput(GLFWwindow * window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
