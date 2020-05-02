@@ -75,6 +75,7 @@ set(
     basicLight
     materials
     lightMaps
+    lightCaster
 )
 
 

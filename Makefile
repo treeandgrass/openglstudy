@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lights__lightCaster
+
+# Build rule for target.
+lights__lightCaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__lightCaster
+.PHONY : lights__lightCaster
+
+# fast build rule for target.
+lights__lightCaster/fast:
+	$(MAKE) -f CMakeFiles/lights__lightCaster.dir/build.make CMakeFiles/lights__lightCaster.dir/build
+.PHONY : lights__lightCaster/fast
+
+#=============================================================================
 # Target rules for targets named lights__lightMaps
 
 # Build rule for target.
@@ -549,6 +562,33 @@ src/lights/colors/color.cpp.s:
 	$(MAKE) -f CMakeFiles/lights__colors.dir/build.make CMakeFiles/lights__colors.dir/src/lights/colors/color.cpp.s
 .PHONY : src/lights/colors/color.cpp.s
 
+src/lights/lightCaster/lightCaster.o: src/lights/lightCaster/lightCaster.cpp.o
+
+.PHONY : src/lights/lightCaster/lightCaster.o
+
+# target to build an object file
+src/lights/lightCaster/lightCaster.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__lightCaster.dir/build.make CMakeFiles/lights__lightCaster.dir/src/lights/lightCaster/lightCaster.cpp.o
+.PHONY : src/lights/lightCaster/lightCaster.cpp.o
+
+src/lights/lightCaster/lightCaster.i: src/lights/lightCaster/lightCaster.cpp.i
+
+.PHONY : src/lights/lightCaster/lightCaster.i
+
+# target to preprocess a source file
+src/lights/lightCaster/lightCaster.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__lightCaster.dir/build.make CMakeFiles/lights__lightCaster.dir/src/lights/lightCaster/lightCaster.cpp.i
+.PHONY : src/lights/lightCaster/lightCaster.cpp.i
+
+src/lights/lightCaster/lightCaster.s: src/lights/lightCaster/lightCaster.cpp.s
+
+.PHONY : src/lights/lightCaster/lightCaster.s
+
+# target to generate assembly for a file
+src/lights/lightCaster/lightCaster.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__lightCaster.dir/build.make CMakeFiles/lights__lightCaster.dir/src/lights/lightCaster/lightCaster.cpp.s
+.PHONY : src/lights/lightCaster/lightCaster.cpp.s
+
 src/lights/lightMaps/lightMaps.o: src/lights/lightMaps/lightMaps.cpp.o
 
 .PHONY : src/lights/lightMaps/lightMaps.o
@@ -636,6 +676,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... lights__lightCaster"
 	@echo "... lights__lightMaps"
 	@echo "... journey__transform"
 	@echo "... lights__basicLight"
@@ -681,6 +722,9 @@ help:
 	@echo "... src/lights/colors/color.o"
 	@echo "... src/lights/colors/color.i"
 	@echo "... src/lights/colors/color.s"
+	@echo "... src/lights/lightCaster/lightCaster.o"
+	@echo "... src/lights/lightCaster/lightCaster.i"
+	@echo "... src/lights/lightCaster/lightCaster.s"
 	@echo "... src/lights/lightMaps/lightMaps.o"
 	@echo "... src/lights/lightMaps/lightMaps.i"
 	@echo "... src/lights/lightMaps/lightMaps.s"
