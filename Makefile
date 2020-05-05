@@ -189,6 +189,19 @@ lights__colors/fast:
 .PHONY : lights__colors/fast
 
 #=============================================================================
+# Target rules for targets named lights__multipleLights
+
+# Build rule for target.
+lights__multipleLights: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__multipleLights
+.PHONY : lights__multipleLights
+
+# fast build rule for target.
+lights__multipleLights/fast:
+	$(MAKE) -f CMakeFiles/lights__multipleLights.dir/build.make CMakeFiles/lights__multipleLights.dir/build
+.PHONY : lights__multipleLights/fast
+
+#=============================================================================
 # Target rules for targets named journey__camera
 
 # Build rule for target.
@@ -643,6 +656,33 @@ src/lights/materials/materials.cpp.s:
 	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/src/lights/materials/materials.cpp.s
 .PHONY : src/lights/materials/materials.cpp.s
 
+src/lights/multipleLights/multipleLights.o: src/lights/multipleLights/multipleLights.cpp.o
+
+.PHONY : src/lights/multipleLights/multipleLights.o
+
+# target to build an object file
+src/lights/multipleLights/multipleLights.cpp.o:
+	$(MAKE) -f CMakeFiles/lights__multipleLights.dir/build.make CMakeFiles/lights__multipleLights.dir/src/lights/multipleLights/multipleLights.cpp.o
+.PHONY : src/lights/multipleLights/multipleLights.cpp.o
+
+src/lights/multipleLights/multipleLights.i: src/lights/multipleLights/multipleLights.cpp.i
+
+.PHONY : src/lights/multipleLights/multipleLights.i
+
+# target to preprocess a source file
+src/lights/multipleLights/multipleLights.cpp.i:
+	$(MAKE) -f CMakeFiles/lights__multipleLights.dir/build.make CMakeFiles/lights__multipleLights.dir/src/lights/multipleLights/multipleLights.cpp.i
+.PHONY : src/lights/multipleLights/multipleLights.cpp.i
+
+src/lights/multipleLights/multipleLights.s: src/lights/multipleLights/multipleLights.cpp.s
+
+.PHONY : src/lights/multipleLights/multipleLights.s
+
+# target to generate assembly for a file
+src/lights/multipleLights/multipleLights.cpp.s:
+	$(MAKE) -f CMakeFiles/lights__multipleLights.dir/build.make CMakeFiles/lights__multipleLights.dir/src/lights/multipleLights/multipleLights.cpp.s
+.PHONY : src/lights/multipleLights/multipleLights.cpp.s
+
 src/stb_image.o: src/stb_image.cpp.o
 
 .PHONY : src/stb_image.o
@@ -682,6 +722,7 @@ help:
 	@echo "... lights__basicLight"
 	@echo "... GLAD"
 	@echo "... lights__colors"
+	@echo "... lights__multipleLights"
 	@echo "... journey__camera"
 	@echo "... journey__texture"
 	@echo "... rebuild_cache"
@@ -731,6 +772,9 @@ help:
 	@echo "... src/lights/materials/materials.o"
 	@echo "... src/lights/materials/materials.i"
 	@echo "... src/lights/materials/materials.s"
+	@echo "... src/lights/multipleLights/multipleLights.o"
+	@echo "... src/lights/multipleLights/multipleLights.i"
+	@echo "... src/lights/multipleLights/multipleLights.s"
 	@echo "... src/stb_image.o"
 	@echo "... src/stb_image.i"
 	@echo "... src/stb_image.s"

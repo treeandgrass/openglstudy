@@ -76,6 +76,7 @@ set(
     materials
     lightMaps
     lightCaster
+    multipleLights
 )
 
 
