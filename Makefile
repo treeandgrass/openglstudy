@@ -189,6 +189,19 @@ lights__colors/fast:
 .PHONY : lights__colors/fast
 
 #=============================================================================
+# Target rules for targets named advancedgl__stenciltest
+
+# Build rule for target.
+advancedgl__stenciltest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__stenciltest
+.PHONY : advancedgl__stenciltest
+
+# fast build rule for target.
+advancedgl__stenciltest/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__stenciltest.dir/build.make CMakeFiles/advancedgl__stenciltest.dir/build
+.PHONY : advancedgl__stenciltest/fast
+
+#=============================================================================
 # Target rules for targets named lights__multipleLights
 
 # Build rule for target.
@@ -304,6 +317,33 @@ STB_IMAGE: cmake_check_build_system
 STB_IMAGE/fast:
 	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
 .PHONY : STB_IMAGE/fast
+
+src/advancedgl/stenciltest/stenciltest.o: src/advancedgl/stenciltest/stenciltest.cpp.o
+
+.PHONY : src/advancedgl/stenciltest/stenciltest.o
+
+# target to build an object file
+src/advancedgl/stenciltest/stenciltest.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__stenciltest.dir/build.make CMakeFiles/advancedgl__stenciltest.dir/src/advancedgl/stenciltest/stenciltest.cpp.o
+.PHONY : src/advancedgl/stenciltest/stenciltest.cpp.o
+
+src/advancedgl/stenciltest/stenciltest.i: src/advancedgl/stenciltest/stenciltest.cpp.i
+
+.PHONY : src/advancedgl/stenciltest/stenciltest.i
+
+# target to preprocess a source file
+src/advancedgl/stenciltest/stenciltest.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__stenciltest.dir/build.make CMakeFiles/advancedgl__stenciltest.dir/src/advancedgl/stenciltest/stenciltest.cpp.i
+.PHONY : src/advancedgl/stenciltest/stenciltest.cpp.i
+
+src/advancedgl/stenciltest/stenciltest.s: src/advancedgl/stenciltest/stenciltest.cpp.s
+
+.PHONY : src/advancedgl/stenciltest/stenciltest.s
+
+# target to generate assembly for a file
+src/advancedgl/stenciltest/stenciltest.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__stenciltest.dir/build.make CMakeFiles/advancedgl__stenciltest.dir/src/advancedgl/stenciltest/stenciltest.cpp.s
+.PHONY : src/advancedgl/stenciltest/stenciltest.cpp.s
 
 src/glad.o: src/glad.c.o
 
@@ -722,6 +762,7 @@ help:
 	@echo "... lights__basicLight"
 	@echo "... GLAD"
 	@echo "... lights__colors"
+	@echo "... advancedgl__stenciltest"
 	@echo "... lights__multipleLights"
 	@echo "... journey__camera"
 	@echo "... journey__texture"
@@ -733,6 +774,9 @@ help:
 	@echo "... journey__hello_window"
 	@echo "... edit_cache"
 	@echo "... STB_IMAGE"
+	@echo "... src/advancedgl/stenciltest/stenciltest.o"
+	@echo "... src/advancedgl/stenciltest/stenciltest.i"
+	@echo "... src/advancedgl/stenciltest/stenciltest.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

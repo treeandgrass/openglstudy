@@ -57,6 +57,7 @@ endif(WIN32)
 set(CHAPTERS
     journey
     lights
+    advancedgl
 )
 
 set(journey
@@ -77,6 +78,11 @@ set(
     lightMaps
     lightCaster
     multipleLights
+)
+
+set(
+  advancedgl
+  stenciltest
 )
 
 
