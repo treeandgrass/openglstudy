@@ -267,6 +267,19 @@ journey__shader/fast:
 .PHONY : journey__shader/fast
 
 #=============================================================================
+# Target rules for targets named advancedgl__blending_sorted
+
+# Build rule for target.
+advancedgl__blending_sorted: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__blending_sorted
+.PHONY : advancedgl__blending_sorted
+
+# fast build rule for target.
+advancedgl__blending_sorted/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/build
+.PHONY : advancedgl__blending_sorted/fast
+
+#=============================================================================
 # Target rules for targets named journey__coordinates
 
 # Build rule for target.
@@ -317,6 +330,33 @@ STB_IMAGE: cmake_check_build_system
 STB_IMAGE/fast:
 	$(MAKE) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
 .PHONY : STB_IMAGE/fast
+
+src/advancedgl/blending_sorted/blending_sorted.o: src/advancedgl/blending_sorted/blending_sorted.cpp.o
+
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.o
+
+# target to build an object file
+src/advancedgl/blending_sorted/blending_sorted.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/src/advancedgl/blending_sorted/blending_sorted.cpp.o
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.cpp.o
+
+src/advancedgl/blending_sorted/blending_sorted.i: src/advancedgl/blending_sorted/blending_sorted.cpp.i
+
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.i
+
+# target to preprocess a source file
+src/advancedgl/blending_sorted/blending_sorted.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/src/advancedgl/blending_sorted/blending_sorted.cpp.i
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.cpp.i
+
+src/advancedgl/blending_sorted/blending_sorted.s: src/advancedgl/blending_sorted/blending_sorted.cpp.s
+
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.s
+
+# target to generate assembly for a file
+src/advancedgl/blending_sorted/blending_sorted.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/src/advancedgl/blending_sorted/blending_sorted.cpp.s
+.PHONY : src/advancedgl/blending_sorted/blending_sorted.cpp.s
 
 src/advancedgl/stenciltest/stenciltest.o: src/advancedgl/stenciltest/stenciltest.cpp.o
 
@@ -769,11 +809,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
+	@echo "... advancedgl__blending_sorted"
 	@echo "... journey__coordinates"
 	@echo "... lights__materials"
 	@echo "... journey__hello_window"
 	@echo "... edit_cache"
 	@echo "... STB_IMAGE"
+	@echo "... src/advancedgl/blending_sorted/blending_sorted.o"
+	@echo "... src/advancedgl/blending_sorted/blending_sorted.i"
+	@echo "... src/advancedgl/blending_sorted/blending_sorted.s"
 	@echo "... src/advancedgl/stenciltest/stenciltest.o"
 	@echo "... src/advancedgl/stenciltest/stenciltest.i"
 	@echo "... src/advancedgl/stenciltest/stenciltest.s"

@@ -83,6 +83,7 @@ set(
 set(
   advancedgl
   stenciltest
+  blending_sorted
 )
 
 
