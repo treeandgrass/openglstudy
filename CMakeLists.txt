@@ -84,6 +84,7 @@ set(
   advancedgl
   stenciltest
   blending_sorted
+  framebuffers
 )
 
 

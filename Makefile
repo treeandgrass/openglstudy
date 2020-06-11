@@ -267,6 +267,19 @@ journey__shader/fast:
 .PHONY : journey__shader/fast
 
 #=============================================================================
+# Target rules for targets named advancedgl__framebuffers
+
+# Build rule for target.
+advancedgl__framebuffers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__framebuffers
+.PHONY : advancedgl__framebuffers
+
+# fast build rule for target.
+advancedgl__framebuffers/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__framebuffers.dir/build.make CMakeFiles/advancedgl__framebuffers.dir/build
+.PHONY : advancedgl__framebuffers/fast
+
+#=============================================================================
 # Target rules for targets named advancedgl__blending_sorted
 
 # Build rule for target.
@@ -357,6 +370,33 @@ src/advancedgl/blending_sorted/blending_sorted.s: src/advancedgl/blending_sorted
 src/advancedgl/blending_sorted/blending_sorted.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/src/advancedgl/blending_sorted/blending_sorted.cpp.s
 .PHONY : src/advancedgl/blending_sorted/blending_sorted.cpp.s
+
+src/advancedgl/framebuffers/framebuffers.o: src/advancedgl/framebuffers/framebuffers.cpp.o
+
+.PHONY : src/advancedgl/framebuffers/framebuffers.o
+
+# target to build an object file
+src/advancedgl/framebuffers/framebuffers.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__framebuffers.dir/build.make CMakeFiles/advancedgl__framebuffers.dir/src/advancedgl/framebuffers/framebuffers.cpp.o
+.PHONY : src/advancedgl/framebuffers/framebuffers.cpp.o
+
+src/advancedgl/framebuffers/framebuffers.i: src/advancedgl/framebuffers/framebuffers.cpp.i
+
+.PHONY : src/advancedgl/framebuffers/framebuffers.i
+
+# target to preprocess a source file
+src/advancedgl/framebuffers/framebuffers.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__framebuffers.dir/build.make CMakeFiles/advancedgl__framebuffers.dir/src/advancedgl/framebuffers/framebuffers.cpp.i
+.PHONY : src/advancedgl/framebuffers/framebuffers.cpp.i
+
+src/advancedgl/framebuffers/framebuffers.s: src/advancedgl/framebuffers/framebuffers.cpp.s
+
+.PHONY : src/advancedgl/framebuffers/framebuffers.s
+
+# target to generate assembly for a file
+src/advancedgl/framebuffers/framebuffers.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__framebuffers.dir/build.make CMakeFiles/advancedgl__framebuffers.dir/src/advancedgl/framebuffers/framebuffers.cpp.s
+.PHONY : src/advancedgl/framebuffers/framebuffers.cpp.s
 
 src/advancedgl/stenciltest/stenciltest.o: src/advancedgl/stenciltest/stenciltest.cpp.o
 
@@ -809,6 +849,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
+	@echo "... advancedgl__framebuffers"
 	@echo "... advancedgl__blending_sorted"
 	@echo "... journey__coordinates"
 	@echo "... lights__materials"
@@ -818,6 +859,9 @@ help:
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.o"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.i"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.s"
+	@echo "... src/advancedgl/framebuffers/framebuffers.o"
+	@echo "... src/advancedgl/framebuffers/framebuffers.i"
+	@echo "... src/advancedgl/framebuffers/framebuffers.s"
 	@echo "... src/advancedgl/stenciltest/stenciltest.o"
 	@echo "... src/advancedgl/stenciltest/stenciltest.i"
 	@echo "... src/advancedgl/stenciltest/stenciltest.s"
