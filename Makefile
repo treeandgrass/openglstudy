@@ -332,6 +332,19 @@ journey__hello_window/fast:
 .PHONY : journey__hello_window/fast
 
 #=============================================================================
+# Target rules for targets named advancedgl__cubemapping
+
+# Build rule for target.
+advancedgl__cubemapping: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__cubemapping
+.PHONY : advancedgl__cubemapping
+
+# fast build rule for target.
+advancedgl__cubemapping/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemapping.dir/build.make CMakeFiles/advancedgl__cubemapping.dir/build
+.PHONY : advancedgl__cubemapping/fast
+
+#=============================================================================
 # Target rules for targets named STB_IMAGE
 
 # Build rule for target.
@@ -370,6 +383,33 @@ src/advancedgl/blending_sorted/blending_sorted.s: src/advancedgl/blending_sorted
 src/advancedgl/blending_sorted/blending_sorted.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedgl__blending_sorted.dir/build.make CMakeFiles/advancedgl__blending_sorted.dir/src/advancedgl/blending_sorted/blending_sorted.cpp.s
 .PHONY : src/advancedgl/blending_sorted/blending_sorted.cpp.s
+
+src/advancedgl/cubemapping/cubemaps_skybox.o: src/advancedgl/cubemapping/cubemaps_skybox.cpp.o
+
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.o
+
+# target to build an object file
+src/advancedgl/cubemapping/cubemaps_skybox.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemapping.dir/build.make CMakeFiles/advancedgl__cubemapping.dir/src/advancedgl/cubemapping/cubemaps_skybox.cpp.o
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.cpp.o
+
+src/advancedgl/cubemapping/cubemaps_skybox.i: src/advancedgl/cubemapping/cubemaps_skybox.cpp.i
+
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.i
+
+# target to preprocess a source file
+src/advancedgl/cubemapping/cubemaps_skybox.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemapping.dir/build.make CMakeFiles/advancedgl__cubemapping.dir/src/advancedgl/cubemapping/cubemaps_skybox.cpp.i
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.cpp.i
+
+src/advancedgl/cubemapping/cubemaps_skybox.s: src/advancedgl/cubemapping/cubemaps_skybox.cpp.s
+
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.s
+
+# target to generate assembly for a file
+src/advancedgl/cubemapping/cubemaps_skybox.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemapping.dir/build.make CMakeFiles/advancedgl__cubemapping.dir/src/advancedgl/cubemapping/cubemaps_skybox.cpp.s
+.PHONY : src/advancedgl/cubemapping/cubemaps_skybox.cpp.s
 
 src/advancedgl/framebuffers/framebuffers.o: src/advancedgl/framebuffers/framebuffers.cpp.o
 
@@ -855,10 +895,14 @@ help:
 	@echo "... lights__materials"
 	@echo "... journey__hello_window"
 	@echo "... edit_cache"
+	@echo "... advancedgl__cubemapping"
 	@echo "... STB_IMAGE"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.o"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.i"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.s"
+	@echo "... src/advancedgl/cubemapping/cubemaps_skybox.o"
+	@echo "... src/advancedgl/cubemapping/cubemaps_skybox.i"
+	@echo "... src/advancedgl/cubemapping/cubemaps_skybox.s"
 	@echo "... src/advancedgl/framebuffers/framebuffers.o"
 	@echo "... src/advancedgl/framebuffers/framebuffers.i"
 	@echo "... src/advancedgl/framebuffers/framebuffers.s"

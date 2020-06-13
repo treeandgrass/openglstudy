@@ -85,6 +85,7 @@ set(
   stenciltest
   blending_sorted
   framebuffers
+  cubemapping
 )
 
 
