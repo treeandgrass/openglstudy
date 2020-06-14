@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named advancedgl__cubemappingrefraction
+
+# Build rule for target.
+advancedgl__cubemappingrefraction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__cubemappingrefraction
+.PHONY : advancedgl__cubemappingrefraction
+
+# fast build rule for target.
+advancedgl__cubemappingrefraction/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemappingrefraction.dir/build.make CMakeFiles/advancedgl__cubemappingrefraction.dir/build
+.PHONY : advancedgl__cubemappingrefraction/fast
+
+#=============================================================================
 # Target rules for targets named advancedgl__cubemappingreflection
 
 # Build rule for target.
@@ -450,6 +463,33 @@ src/advancedgl/cubemappingreflection/cubemaps_skybox.s: src/advancedgl/cubemappi
 src/advancedgl/cubemappingreflection/cubemaps_skybox.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedgl__cubemappingreflection.dir/build.make CMakeFiles/advancedgl__cubemappingreflection.dir/src/advancedgl/cubemappingreflection/cubemaps_skybox.cpp.s
 .PHONY : src/advancedgl/cubemappingreflection/cubemaps_skybox.cpp.s
+
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.o: src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.o
+
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.o
+
+# target to build an object file
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemappingrefraction.dir/build.make CMakeFiles/advancedgl__cubemappingrefraction.dir/src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.o
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.o
+
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.i: src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.i
+
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.i
+
+# target to preprocess a source file
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemappingrefraction.dir/build.make CMakeFiles/advancedgl__cubemappingrefraction.dir/src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.i
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.i
+
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.s: src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.s
+
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.s
+
+# target to generate assembly for a file
+src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__cubemappingrefraction.dir/build.make CMakeFiles/advancedgl__cubemappingrefraction.dir/src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.s
+.PHONY : src/advancedgl/cubemappingrefraction/cubemaps_skybox.cpp.s
 
 src/advancedgl/framebuffers/framebuffers.o: src/advancedgl/framebuffers/framebuffers.cpp.o
 
@@ -916,6 +956,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... advancedgl__cubemappingrefraction"
 	@echo "... advancedgl__cubemappingreflection"
 	@echo "... lights__lightCaster"
 	@echo "... lights__lightMaps"
@@ -947,6 +988,9 @@ help:
 	@echo "... src/advancedgl/cubemappingreflection/cubemaps_skybox.o"
 	@echo "... src/advancedgl/cubemappingreflection/cubemaps_skybox.i"
 	@echo "... src/advancedgl/cubemappingreflection/cubemaps_skybox.s"
+	@echo "... src/advancedgl/cubemappingrefraction/cubemaps_skybox.o"
+	@echo "... src/advancedgl/cubemappingrefraction/cubemaps_skybox.i"
+	@echo "... src/advancedgl/cubemappingrefraction/cubemaps_skybox.s"
 	@echo "... src/advancedgl/framebuffers/framebuffers.o"
 	@echo "... src/advancedgl/framebuffers/framebuffers.i"
 	@echo "... src/advancedgl/framebuffers/framebuffers.s"

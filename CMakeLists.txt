@@ -87,6 +87,7 @@ set(
   framebuffers
   cubemapping
   cubemappingreflection
+  cubemappingrefraction
 )
 
 
