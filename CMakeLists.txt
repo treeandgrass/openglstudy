@@ -86,6 +86,7 @@ set(
   blending_sorted
   framebuffers
   cubemapping
+  cubemappingreflection
 )
 
 
