@@ -13,6 +13,9 @@ class Model {
     Model (const char* path) {
       loadModel(path);
     }
+    Model (const string path) {
+      loadModel(path);
+    }
     void Draw(Shader shader) {
       for (unsigned int i = 0; i < meshes.size(); i++) {
         meshes[i].Draw(shader);

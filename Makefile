@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named GLAD
+
+# Build rule for target.
+GLAD: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GLAD
+.PHONY : GLAD
+
+# fast build rule for target.
+GLAD/fast:
+	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
+.PHONY : GLAD/fast
+
+#=============================================================================
 # Target rules for targets named advancedgl__cubemappingrefraction
 
 # Build rule for target.
@@ -189,17 +202,17 @@ lights__basicLight/fast:
 .PHONY : lights__basicLight/fast
 
 #=============================================================================
-# Target rules for targets named GLAD
+# Target rules for targets named journey__texture
 
 # Build rule for target.
-GLAD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GLAD
-.PHONY : GLAD
+journey__texture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__texture
+.PHONY : journey__texture
 
 # fast build rule for target.
-GLAD/fast:
-	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
-.PHONY : GLAD/fast
+journey__texture/fast:
+	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/build
+.PHONY : journey__texture/fast
 
 #=============================================================================
 # Target rules for targets named lights__colors
@@ -215,6 +228,19 @@ lights__colors/fast:
 .PHONY : lights__colors/fast
 
 #=============================================================================
+# Target rules for targets named journey__coordinates
+
+# Build rule for target.
+journey__coordinates: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 journey__coordinates
+.PHONY : journey__coordinates
+
+# fast build rule for target.
+journey__coordinates/fast:
+	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/build
+.PHONY : journey__coordinates/fast
+
+#=============================================================================
 # Target rules for targets named advancedgl__stenciltest
 
 # Build rule for target.
@@ -226,6 +252,19 @@ advancedgl__stenciltest: cmake_check_build_system
 advancedgl__stenciltest/fast:
 	$(MAKE) -f CMakeFiles/advancedgl__stenciltest.dir/build.make CMakeFiles/advancedgl__stenciltest.dir/build
 .PHONY : advancedgl__stenciltest/fast
+
+#=============================================================================
+# Target rules for targets named lights__materials
+
+# Build rule for target.
+lights__materials: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lights__materials
+.PHONY : lights__materials
+
+# fast build rule for target.
+lights__materials/fast:
+	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/build
+.PHONY : lights__materials/fast
 
 #=============================================================================
 # Target rules for targets named lights__multipleLights
@@ -252,19 +291,6 @@ journey__camera: cmake_check_build_system
 journey__camera/fast:
 	$(MAKE) -f CMakeFiles/journey__camera.dir/build.make CMakeFiles/journey__camera.dir/build
 .PHONY : journey__camera/fast
-
-#=============================================================================
-# Target rules for targets named journey__texture
-
-# Build rule for target.
-journey__texture: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 journey__texture
-.PHONY : journey__texture
-
-# fast build rule for target.
-journey__texture/fast:
-	$(MAKE) -f CMakeFiles/journey__texture.dir/build.make CMakeFiles/journey__texture.dir/build
-.PHONY : journey__texture/fast
 
 #=============================================================================
 # Target rules for targets named journey__triangle
@@ -319,32 +345,6 @@ advancedgl__blending_sorted/fast:
 .PHONY : advancedgl__blending_sorted/fast
 
 #=============================================================================
-# Target rules for targets named journey__coordinates
-
-# Build rule for target.
-journey__coordinates: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 journey__coordinates
-.PHONY : journey__coordinates
-
-# fast build rule for target.
-journey__coordinates/fast:
-	$(MAKE) -f CMakeFiles/journey__coordinates.dir/build.make CMakeFiles/journey__coordinates.dir/build
-.PHONY : journey__coordinates/fast
-
-#=============================================================================
-# Target rules for targets named lights__materials
-
-# Build rule for target.
-lights__materials: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lights__materials
-.PHONY : lights__materials
-
-# fast build rule for target.
-lights__materials/fast:
-	$(MAKE) -f CMakeFiles/lights__materials.dir/build.make CMakeFiles/lights__materials.dir/build
-.PHONY : lights__materials/fast
-
-#=============================================================================
 # Target rules for targets named journey__hello_window
 
 # Build rule for target.
@@ -356,6 +356,19 @@ journey__hello_window: cmake_check_build_system
 journey__hello_window/fast:
 	$(MAKE) -f CMakeFiles/journey__hello_window.dir/build.make CMakeFiles/journey__hello_window.dir/build
 .PHONY : journey__hello_window/fast
+
+#=============================================================================
+# Target rules for targets named advancedgl__geometryshader
+
+# Build rule for target.
+advancedgl__geometryshader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__geometryshader
+.PHONY : advancedgl__geometryshader
+
+# fast build rule for target.
+advancedgl__geometryshader/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__geometryshader.dir/build.make CMakeFiles/advancedgl__geometryshader.dir/build
+.PHONY : advancedgl__geometryshader/fast
 
 #=============================================================================
 # Target rules for targets named advancedgl__cubemapping
@@ -517,6 +530,33 @@ src/advancedgl/framebuffers/framebuffers.s: src/advancedgl/framebuffers/framebuf
 src/advancedgl/framebuffers/framebuffers.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedgl__framebuffers.dir/build.make CMakeFiles/advancedgl__framebuffers.dir/src/advancedgl/framebuffers/framebuffers.cpp.s
 .PHONY : src/advancedgl/framebuffers/framebuffers.cpp.s
+
+src/advancedgl/geometryshader/normal_visualization.o: src/advancedgl/geometryshader/normal_visualization.cpp.o
+
+.PHONY : src/advancedgl/geometryshader/normal_visualization.o
+
+# target to build an object file
+src/advancedgl/geometryshader/normal_visualization.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__geometryshader.dir/build.make CMakeFiles/advancedgl__geometryshader.dir/src/advancedgl/geometryshader/normal_visualization.cpp.o
+.PHONY : src/advancedgl/geometryshader/normal_visualization.cpp.o
+
+src/advancedgl/geometryshader/normal_visualization.i: src/advancedgl/geometryshader/normal_visualization.cpp.i
+
+.PHONY : src/advancedgl/geometryshader/normal_visualization.i
+
+# target to preprocess a source file
+src/advancedgl/geometryshader/normal_visualization.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__geometryshader.dir/build.make CMakeFiles/advancedgl__geometryshader.dir/src/advancedgl/geometryshader/normal_visualization.cpp.i
+.PHONY : src/advancedgl/geometryshader/normal_visualization.cpp.i
+
+src/advancedgl/geometryshader/normal_visualization.s: src/advancedgl/geometryshader/normal_visualization.cpp.s
+
+.PHONY : src/advancedgl/geometryshader/normal_visualization.s
+
+# target to generate assembly for a file
+src/advancedgl/geometryshader/normal_visualization.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__geometryshader.dir/build.make CMakeFiles/advancedgl__geometryshader.dir/src/advancedgl/geometryshader/normal_visualization.cpp.s
+.PHONY : src/advancedgl/geometryshader/normal_visualization.cpp.s
 
 src/advancedgl/stenciltest/stenciltest.o: src/advancedgl/stenciltest/stenciltest.cpp.o
 
@@ -956,27 +996,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
+	@echo "... GLAD"
 	@echo "... advancedgl__cubemappingrefraction"
 	@echo "... advancedgl__cubemappingreflection"
 	@echo "... lights__lightCaster"
 	@echo "... lights__lightMaps"
 	@echo "... journey__transform"
 	@echo "... lights__basicLight"
-	@echo "... GLAD"
+	@echo "... journey__texture"
 	@echo "... lights__colors"
+	@echo "... journey__coordinates"
 	@echo "... advancedgl__stenciltest"
+	@echo "... lights__materials"
 	@echo "... lights__multipleLights"
 	@echo "... journey__camera"
-	@echo "... journey__texture"
-	@echo "... rebuild_cache"
 	@echo "... journey__triangle"
 	@echo "... journey__shader"
 	@echo "... advancedgl__framebuffers"
 	@echo "... advancedgl__blending_sorted"
-	@echo "... journey__coordinates"
-	@echo "... lights__materials"
 	@echo "... journey__hello_window"
 	@echo "... edit_cache"
+	@echo "... advancedgl__geometryshader"
 	@echo "... advancedgl__cubemapping"
 	@echo "... STB_IMAGE"
 	@echo "... src/advancedgl/blending_sorted/blending_sorted.o"
@@ -994,6 +1035,9 @@ help:
 	@echo "... src/advancedgl/framebuffers/framebuffers.o"
 	@echo "... src/advancedgl/framebuffers/framebuffers.i"
 	@echo "... src/advancedgl/framebuffers/framebuffers.s"
+	@echo "... src/advancedgl/geometryshader/normal_visualization.o"
+	@echo "... src/advancedgl/geometryshader/normal_visualization.i"
+	@echo "... src/advancedgl/geometryshader/normal_visualization.s"
 	@echo "... src/advancedgl/stenciltest/stenciltest.o"
 	@echo "... src/advancedgl/stenciltest/stenciltest.i"
 	@echo "... src/advancedgl/stenciltest/stenciltest.s"

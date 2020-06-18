@@ -88,6 +88,7 @@ set(
   cubemapping
   cubemappingreflection
   cubemappingrefraction
+  geometryshader
 )
 
 
