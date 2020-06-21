@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named advancedgl__instance
+
+# Build rule for target.
+advancedgl__instance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 advancedgl__instance
+.PHONY : advancedgl__instance
+
+# fast build rule for target.
+advancedgl__instance/fast:
+	$(MAKE) -f CMakeFiles/advancedgl__instance.dir/build.make CMakeFiles/advancedgl__instance.dir/build
+.PHONY : advancedgl__instance/fast
+
+#=============================================================================
 # Target rules for targets named GLAD
 
 # Build rule for target.
@@ -558,6 +571,33 @@ src/advancedgl/geometryshader/normal_visualization.cpp.s:
 	$(MAKE) -f CMakeFiles/advancedgl__geometryshader.dir/build.make CMakeFiles/advancedgl__geometryshader.dir/src/advancedgl/geometryshader/normal_visualization.cpp.s
 .PHONY : src/advancedgl/geometryshader/normal_visualization.cpp.s
 
+src/advancedgl/instance/asteroids_instanced.o: src/advancedgl/instance/asteroids_instanced.cpp.o
+
+.PHONY : src/advancedgl/instance/asteroids_instanced.o
+
+# target to build an object file
+src/advancedgl/instance/asteroids_instanced.cpp.o:
+	$(MAKE) -f CMakeFiles/advancedgl__instance.dir/build.make CMakeFiles/advancedgl__instance.dir/src/advancedgl/instance/asteroids_instanced.cpp.o
+.PHONY : src/advancedgl/instance/asteroids_instanced.cpp.o
+
+src/advancedgl/instance/asteroids_instanced.i: src/advancedgl/instance/asteroids_instanced.cpp.i
+
+.PHONY : src/advancedgl/instance/asteroids_instanced.i
+
+# target to preprocess a source file
+src/advancedgl/instance/asteroids_instanced.cpp.i:
+	$(MAKE) -f CMakeFiles/advancedgl__instance.dir/build.make CMakeFiles/advancedgl__instance.dir/src/advancedgl/instance/asteroids_instanced.cpp.i
+.PHONY : src/advancedgl/instance/asteroids_instanced.cpp.i
+
+src/advancedgl/instance/asteroids_instanced.s: src/advancedgl/instance/asteroids_instanced.cpp.s
+
+.PHONY : src/advancedgl/instance/asteroids_instanced.s
+
+# target to generate assembly for a file
+src/advancedgl/instance/asteroids_instanced.cpp.s:
+	$(MAKE) -f CMakeFiles/advancedgl__instance.dir/build.make CMakeFiles/advancedgl__instance.dir/src/advancedgl/instance/asteroids_instanced.cpp.s
+.PHONY : src/advancedgl/instance/asteroids_instanced.cpp.s
+
 src/advancedgl/stenciltest/stenciltest.o: src/advancedgl/stenciltest/stenciltest.cpp.o
 
 .PHONY : src/advancedgl/stenciltest/stenciltest.o
@@ -997,6 +1037,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... advancedgl__instance"
 	@echo "... GLAD"
 	@echo "... advancedgl__cubemappingrefraction"
 	@echo "... advancedgl__cubemappingreflection"
@@ -1016,7 +1058,6 @@ help:
 	@echo "... advancedgl__framebuffers"
 	@echo "... advancedgl__blending_sorted"
 	@echo "... journey__hello_window"
-	@echo "... edit_cache"
 	@echo "... advancedgl__geometryshader"
 	@echo "... advancedgl__cubemapping"
 	@echo "... STB_IMAGE"
@@ -1038,6 +1079,9 @@ help:
 	@echo "... src/advancedgl/geometryshader/normal_visualization.o"
 	@echo "... src/advancedgl/geometryshader/normal_visualization.i"
 	@echo "... src/advancedgl/geometryshader/normal_visualization.s"
+	@echo "... src/advancedgl/instance/asteroids_instanced.o"
+	@echo "... src/advancedgl/instance/asteroids_instanced.i"
+	@echo "... src/advancedgl/instance/asteroids_instanced.s"
 	@echo "... src/advancedgl/stenciltest/stenciltest.o"
 	@echo "... src/advancedgl/stenciltest/stenciltest.i"
 	@echo "... src/advancedgl/stenciltest/stenciltest.s"

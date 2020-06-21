@@ -21,10 +21,10 @@ class Model {
         meshes[i].Draw(shader);
       }
     }
+  vector<Mesh> meshes;
+  vector<Texture> textures_loaded;
   private:
-    vector<Mesh> meshes;
     string directory;
-    vector<Texture> textures_loaded;
     void loadModel(string path) {
       Assimp::Importer import;
       const aiScene* scene = import.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);

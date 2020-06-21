@@ -89,6 +89,7 @@ set(
   cubemappingreflection
   cubemappingrefraction
   geometryshader
+  instance
 )
 
 
