@@ -58,6 +58,7 @@ set(CHAPTERS
     journey
     lights
     advancedgl
+    pbr
 )
 
 set(journey
@@ -90,6 +91,11 @@ set(
   cubemappingrefraction
   geometryshader
   instance
+)
+
+set(
+  pbr
+  lighting
 )
 
 

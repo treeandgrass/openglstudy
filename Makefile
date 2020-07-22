@@ -241,6 +241,19 @@ lights__colors/fast:
 .PHONY : lights__colors/fast
 
 #=============================================================================
+# Target rules for targets named pbr__lighting
+
+# Build rule for target.
+pbr__lighting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pbr__lighting
+.PHONY : pbr__lighting
+
+# fast build rule for target.
+pbr__lighting/fast:
+	$(MAKE) -f CMakeFiles/pbr__lighting.dir/build.make CMakeFiles/pbr__lighting.dir/build
+.PHONY : pbr__lighting/fast
+
+#=============================================================================
 # Target rules for targets named journey__coordinates
 
 # Build rule for target.
@@ -1003,6 +1016,33 @@ src/lights/multipleLights/multipleLights.cpp.s:
 	$(MAKE) -f CMakeFiles/lights__multipleLights.dir/build.make CMakeFiles/lights__multipleLights.dir/src/lights/multipleLights/multipleLights.cpp.s
 .PHONY : src/lights/multipleLights/multipleLights.cpp.s
 
+src/pbr/lighting/lighting_textured.o: src/pbr/lighting/lighting_textured.cpp.o
+
+.PHONY : src/pbr/lighting/lighting_textured.o
+
+# target to build an object file
+src/pbr/lighting/lighting_textured.cpp.o:
+	$(MAKE) -f CMakeFiles/pbr__lighting.dir/build.make CMakeFiles/pbr__lighting.dir/src/pbr/lighting/lighting_textured.cpp.o
+.PHONY : src/pbr/lighting/lighting_textured.cpp.o
+
+src/pbr/lighting/lighting_textured.i: src/pbr/lighting/lighting_textured.cpp.i
+
+.PHONY : src/pbr/lighting/lighting_textured.i
+
+# target to preprocess a source file
+src/pbr/lighting/lighting_textured.cpp.i:
+	$(MAKE) -f CMakeFiles/pbr__lighting.dir/build.make CMakeFiles/pbr__lighting.dir/src/pbr/lighting/lighting_textured.cpp.i
+.PHONY : src/pbr/lighting/lighting_textured.cpp.i
+
+src/pbr/lighting/lighting_textured.s: src/pbr/lighting/lighting_textured.cpp.s
+
+.PHONY : src/pbr/lighting/lighting_textured.s
+
+# target to generate assembly for a file
+src/pbr/lighting/lighting_textured.cpp.s:
+	$(MAKE) -f CMakeFiles/pbr__lighting.dir/build.make CMakeFiles/pbr__lighting.dir/src/pbr/lighting/lighting_textured.cpp.s
+.PHONY : src/pbr/lighting/lighting_textured.cpp.s
+
 src/stb_image.o: src/stb_image.cpp.o
 
 .PHONY : src/stb_image.o
@@ -1048,6 +1088,7 @@ help:
 	@echo "... lights__basicLight"
 	@echo "... journey__texture"
 	@echo "... lights__colors"
+	@echo "... pbr__lighting"
 	@echo "... journey__coordinates"
 	@echo "... advancedgl__stenciltest"
 	@echo "... lights__materials"
@@ -1127,6 +1168,9 @@ help:
 	@echo "... src/lights/multipleLights/multipleLights.o"
 	@echo "... src/lights/multipleLights/multipleLights.i"
 	@echo "... src/lights/multipleLights/multipleLights.s"
+	@echo "... src/pbr/lighting/lighting_textured.o"
+	@echo "... src/pbr/lighting/lighting_textured.i"
+	@echo "... src/pbr/lighting/lighting_textured.s"
 	@echo "... src/stb_image.o"
 	@echo "... src/stb_image.i"
 	@echo "... src/stb_image.s"
